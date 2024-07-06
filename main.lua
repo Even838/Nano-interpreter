@@ -1,5 +1,7 @@
-
 local commands = {}
+
+
+
 
 -- Função para criar um arquivo HTML
 function criarArquivoHTML()
@@ -33,6 +35,15 @@ function verde()
     print("Cor do fundo alterada para Verde") 
 end
 
+function preto()
+  local file = io.open("index.css", "w") 
+    file:write("body { background-color: black; }") 
+    file:close()
+    print("Cor do fundo alterada para preto") 
+end
+  
+
+
 -- Loop para verificar a entrada do usuário e armazenar os comandos
 while true do
     local input = io.read()
@@ -49,7 +60,14 @@ while true do
                 azul()
             elseif command == "color f = verde" then
                 verde()
-            elseif string.sub(command, 1, 4) == "tex(" then
+              elseif command == "color f = preto" then
+                preto()
+            elseif command == "text" then
+              print(" erro not is 'text' is Tex ")
+              
+            
+              
+            elseif string.sub(command, 1, 4) == "tex(" or "TEX("then
                 local texto = string.match(command, "%((.+)%)")
                 if texto then
                     print(texto) -- Exibe o texto entre parênteses
