@@ -8,6 +8,22 @@ function criarArquivoHTML()
     print("Arquivo HTML criado com sucesso!")
 end
 
+function inp()
+  local inpu = io.read()
+  
+  function tex_inp(inpu)
+    print(inpu)
+  end
+  
+end
+
+
+function inp_nun()
+  local inp = tonumber(io.read())
+  
+  
+end
+
 -- Função para criar um arquivo CSS
 function criarArquivoCSS()
     local file = io.open("index.css", "w")
@@ -38,8 +54,12 @@ function preto()
     file:close()
     print("Cor do fundo alterada para preto") 
 end
-  
 
+
+
+function n()
+  print("ㅤ")
+end
 
 -- Loop para verificar a entrada do usuário e armazenar os comandos
 while true do
@@ -59,9 +79,16 @@ while true do
                 verde()
               elseif command == "color f = preto" then
                 preto()
+              elseif command == "/n" then
+                n()
             elseif command == "text" then
               print(" erro not is 'text' is Tex ")
-                
+            elseif command == "create_input" then
+              inp()
+            elseif command == "create_input(n)"then
+              inp_nun()
+              
+              
             elseif string.sub(command, 1, 4) == "tex(" or "TEX("then
                 local texto = string.match(command, "%((.+)%)")
                 if texto then
