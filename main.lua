@@ -1,8 +1,5 @@
 local commands = {}
 
-
-
-
 -- Função para criar um arquivo HTML
 function criarArquivoHTML()
     local file = io.open("index.html", "w")
@@ -64,9 +61,7 @@ while true do
                 preto()
             elseif command == "text" then
               print(" erro not is 'text' is Tex ")
-              
-            
-              
+                
             elseif string.sub(command, 1, 4) == "tex(" or "TEX("then
                 local texto = string.match(command, "%((.+)%)")
                 if texto then
