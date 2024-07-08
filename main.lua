@@ -14,6 +14,12 @@ function ramo(n)
   print(n)
 end
 
+function n()
+  inn = tonumber(io.read())
+  
+  
+end
+
 function ane()
   
   local data_hora_atual = os.date("*t")
@@ -144,6 +150,8 @@ while true do
                 n()
              elseif command == "radow()" then
                 ramo()
+             elseif command  == "create_input(n)" then
+               n()
               elseif command == "new date = segundos" then
                 segundo() 
             elseif command == "text" then
