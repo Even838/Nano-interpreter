@@ -103,6 +103,17 @@ function verde()
     print("Cor do fundo alterada para Verde") 
 end
 
+function raiz()
+  local input = tonumber(io.read())
+    local raiz = input * input
+      print(raiz)
+  
+  
+  
+end
+
+
+
 function preto()
   local file = io.open("index.css", "w") 
     file:write("body { background-color: black; }") 
@@ -154,6 +165,8 @@ while true do
                n()
               elseif command == "new date = segundos" then
                 segundo() 
+              elseif command == "::raiz"  then
+                raiz()
             elseif command == "text" then
               print(" erro not is 'text' is Tex ")
             elseif command == "create_input" then
